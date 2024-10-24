@@ -16,6 +16,9 @@ RUN pip install --no-cache-dir Flask==2.3.2 gunicorn==20.1.0
 # Copia el código de la aplicación en el contenedor
 COPY . /app
 
+# Da permisos de ejecución a gunicorn.sh
+RUN chmod +x /app/gunicorn.sh
+
 # Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
