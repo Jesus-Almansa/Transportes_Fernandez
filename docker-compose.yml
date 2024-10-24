@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+    hostname: yharnam
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_APP: __init__.py
+      FLASK_ENV: development  # Esto habilita el modo de depuración
+    stdin_open: true  # Para mantener el contenedor activo
+    tty: true  # Para habilitar el modo interactivo
+
